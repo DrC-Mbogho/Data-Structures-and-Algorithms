@@ -1,0 +1,9 @@
+Create an array to store elements of the queue, with a int for max queue size. E.g. An array to store customer numbers in the bank, with max size.
+Create variables for front, back and number of elements. E.g. You need to know the customer at the front and back positions, and number of customers in the queue.
+Create methods to check if the queue is full or empty. E.g. To know if there are no people in the queue, or if the queue is max size.
+Create method to add elements to the queue. E.g. Check if queue is full, If not - Add new customer to the back of the queue, add customer number to array, then increase customer count.
+Create a method to remove element from the queue. E.g. Check if queue is empty. If not:
+ - check if this is the last person in the queue. If yes, then reset front and back counters.
+- If this is not the last person, increment front counter to simulate the next person moving to the front of the queue, and decrease the number of customers in the queue.
+Create other methods like size, check front item, print queue elements, etc.
+Create a Class/method to execute those methods.
