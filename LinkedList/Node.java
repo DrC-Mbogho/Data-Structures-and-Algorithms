@@ -10,10 +10,5 @@ class Node
      next = null;
    }
    
-   //fetch data
-   public String getData()
-   {
-     return data; 
-   }
 
 }
