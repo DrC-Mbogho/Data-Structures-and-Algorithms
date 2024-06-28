@@ -1,0 +1,11 @@
+A LinkedList is a collection of nodes, each node containing data and a reference to the next object. A connected set of nodes and references creates a linked list.
+Create a node that contains:
+a.	Variable(s) for the data each node will hold. 
+b.	Variable as an object of this class, which is the pointer to the next node. The pointer is an object because you can create a reference to another object (another node), by defining a variable whose data type is a class.
+d.	Methods to return each data that the nodes hold. 
+Create a variable for the head node and initialize to null. 
+Create a function to insert new node to the linked list by:
+a. If this is the first node in the list, assign the node as the head node. 
+b. If the head node is not null, traverse the list from the head node, adding the node to the next empty address. 
+Create a function to remove a node.
+Create a function to print the data in the nodes. 
