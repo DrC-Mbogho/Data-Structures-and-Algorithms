@@ -1,0 +1,7 @@
+Consider implementation of a stack of books. 
+Declare stack size and choose a storage method (like an array) e.g. How many books will be in your pile and how will you store them.
+Create methods to check when the stack is empty or full. E.g. You will want to know when you have or do not have books.
+Create method to add items to the stack, first checking if stack is full. E.g. Add books to the pile, check if pile full as per the size declared in 1, if true do not add any more books and increment the size.
+Create method to removeitems to the stack, first checking if stack is empty. E.g. Remove books from the pile, check if pile empty (if the size is 0), if true do not remove any more books. If pile is not empty, remove the book and decrement the size.
+Create other methods like size, check top item, print stack etc
+Create a Class/method to execute those methods.
