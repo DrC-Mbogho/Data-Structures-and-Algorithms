@@ -1,4 +1,5 @@
 //Implementation of a queue in Java
+//Execute by running Queueing.java
 
 public class MainQueue
 {
