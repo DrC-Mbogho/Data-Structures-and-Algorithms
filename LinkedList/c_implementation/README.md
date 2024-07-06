@@ -5,22 +5,26 @@ This is an implementation of a linked list in C.
 
 ### How to run the program
 1. **(OPTIONAL)** If you want to contribute to the repo, fork it to your GitHub.
+
 2. Clone the (forked) repository using the following command:
-```
-git clone git@github.com:<your_github_username>/Data-Structures-and-Algorithms.git
-```
+    ```
+    git clone git@github.com:<your_github_username>/Data-Structures-and-Algorithms.git
+    ```
+
 3. Move to the `c_implementation` folder:
-```
-cd Data-Structures-and-Algorithms/LinkedList/c_implementation
-```
+    ```
+    cd Data-Structures-and-Algorithms/LinkedList/c_implementation
+    ```
+
 4. Compile your program to get an executable file:
-```
-gcc singly_linked_list.c student_list.c -o singly_list
-```
+    ```
+    gcc singly_linked_list.c student_list.c -o singly_list
+    ```
+
 5. Run your executable:
-```
-./singly_list
-```
+    ```
+    ./singly_list
+    ```
 
 
 
