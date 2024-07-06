@@ -44,10 +44,10 @@ void insert_node(listnode_t **head, char *data)
  * Description: If the list is empty a null reference will be returned, otherwise the string value
  * of the deleted node will be returned.
  */
-char *delete_node(list_node_t **head)
+char *delete_node(listnode_t **head)
 {
-	list_node_t *current_node;
-	list_node_t *temp; /* Stores 'next' of the current_node */
+	listnode_t *current_node;
+	listnode_t *temp; /* Stores 'next' of the current_node */
 	char *data = NULL;
 
 	/* Check if list is empty */
@@ -87,9 +87,9 @@ char *delete_node(list_node_t **head)
  *
  * Return: Nothing
  */
-void display_list(list_node_t *head)
+void display_list(listnode_t *head)
 {
-	list_node_t *current_node = head;
+	listnode_t *current_node = head;
 
 	if (head == NULL)
 	{
