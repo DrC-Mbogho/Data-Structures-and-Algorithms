@@ -35,6 +35,52 @@ void insert_node(listnode_t **head, char *data)
 	}
 }
 
+
+/**
+ * delete_node - Removes a node from the existing list
+ * @head: Pointer to the head node
+ *
+ * Return: data value of the deleted node, otherwise null
+ * Description: If the list is empty a null reference will be returned, otherwise the string value
+ * of the deleted node will be returned.
+ */
+char *delete_node(list_node_t **head)
+{
+	list_node_t *current_node;
+	list_node_t *temp; /* Stores 'next' of the current_node */
+	char *data = NULL;
+
+	/* Check if list is empty */
+	if (head == NULL)
+	{
+		printf("\nCannot delete from an empty list\n");
+		return (NULL);
+	}
+
+	current_node = *head;
+	if (current_node->next == NULL) /* When list has only one node */
+	{
+		*head = NULL;
+		data = strdup(current_node->data);
+		free(current_node);
+	}
+	else
+	{
+		temp = current_node->next;
+		while (temp->next != NULL)
+		{
+			current_node = temp;
+			temp = temp->next;
+		}
+		data = strdup(temp->data);
+		current_node->next = NULL;
+		free(temp);
+	}
+
+	return (data);
+}
+
+
 /**
  * display_list - Prints the linked list on standard output
  * @head: Pointer to the head node
