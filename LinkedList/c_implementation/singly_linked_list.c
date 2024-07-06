@@ -34,3 +34,31 @@ void insert_node(listnode_t **head, char *data)
 		current_node->next = new_node;
 	}
 }
+
+/**
+ * display_list - Prints the linked list on standard output
+ * @head: Pointer to the head node
+ *
+ * Return: Nothing
+ */
+void display_list(list_node_t *head)
+{
+	list_node_t *current_node = head;
+
+	if (head == NULL)
+	{
+		printf("\nLinked list is empty\n");
+	}
+	else
+	{
+		printf("\nCurrent linked list:\n");
+		while (current_node != NULL)
+		{
+			printf("%s", current_node->data);
+			if (current_node->next != NULL)
+				printf(" -> ");
+			current_node = current_node->next;
+		}
+		printf("\n");
+	}
+}
