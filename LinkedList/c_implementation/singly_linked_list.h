@@ -16,7 +16,7 @@
 typedef struct list_node
 {
 	char *data;
-	struct list_node_t *next;
+	struct list_node *next;
 } listnode_t;
 
 
