@@ -82,3 +82,25 @@ char *peek(stack_t *stack)
 	}
 	return ((stack->content)[stack->top]);
 }
+
+
+/**
+ * print_stack - Prints the existing stack on standard output
+ * @stack: Pointer to the stack
+ *
+ * Return: Nothing
+ */
+void print_stack(stack_t *stack)
+{
+	int i;
+
+	if (is_empty(stack))
+	{
+		printf("\nStack is empty.\n");
+	}
+	else
+	{
+		for (i = stack->top; i >= 0; i--)
+			printf("%s\n", (stack->content)[i]);
+	}
+}
