@@ -46,3 +46,39 @@ stack_t *initialise_stack(int size)
 
 	return (stack);
 }
+
+/**
+ * pop - Removes an item from the top of the stack
+ * @stack: Pointer to the stack
+ *
+ * Return: String that has been popped, otherwise null if stack is empty
+ */
+char *pop(stack_t *stack)
+{
+	char **content = stack->content;
+
+	if (is_empty(stack))
+	{
+		printf("Stack is empty.\n");
+		return (NULL);
+	}
+
+	return (content[(stack->top)--]);
+}
+
+
+/**
+ * peek - Returns the item at the top of the stack without removing it
+ * @stack: Pointer to the stack
+ *
+ * Return: String at the top of the stack, otherwise null if stack is empty
+ */
+char *peek(stack_t *stack)
+{
+	if (is_empty(stack))
+	{
+		printf("Stack is empty.\n");
+		return (NULL);
+	}
+	return ((stack->content)[stack->top]);
+}
