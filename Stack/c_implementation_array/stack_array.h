@@ -17,8 +17,8 @@
  */
 typedef struct stack
 {
-	size_t size = 0;
-	size_t top = -1;
+	int size;
+	int top;
 	char **content;
 } stack_t;
 
