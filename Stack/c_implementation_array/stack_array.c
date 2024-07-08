@@ -14,6 +14,21 @@ int is_empty(stack_t *stack)
 	return (0);
 }
 
+
+/**
+ * is_full - Checks if the stack is full
+ * @stack: Pointer to the stack
+ *
+ * Return: 1 if the stack is full, otherwise 0
+ */
+int is_full(stack_t *stack)
+{
+	if (stack == NULL || stack->top == (stack->size - 1))
+		return (1);
+	return (0);
+}
+
+
 /**
  * initialise_stack - Initialises the stack
  * @size: Maximum number of items in the stack
