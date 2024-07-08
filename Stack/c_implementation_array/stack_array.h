@@ -25,9 +25,9 @@ typedef struct stack
 
 int is_empty(stack_t *stack);
 int is_full(stack_t *stack);
-void push(stack_t *stack);
 void pop(stack_t *stack);
 void peek(stack_t *stack);
+void push(stack_t *stack, const char *data);
 
 
 #endif /* ifndef STACK_ARRAY_H */
