@@ -62,6 +62,27 @@ stack_t *initialise_stack(int size)
 	return (stack);
 }
 
+
+/**
+ * push - Adds an item to the top of the stack
+ * @stack: Pointer to the stack
+ * @data: String to add to the top of the stack
+ *
+ * Return: Nothing
+ */
+void push(stack_t *stack, const char *data)
+{
+	char **content = stack->content;
+
+	if (is_full(stack))
+	{
+		printf("Stack is full.\n");
+		return;
+	}
+	content[++(stack->top)] = strdup(data);
+}
+
+
 /**
  * pop - Removes an item from the top of the stack
  * @stack: Pointer to the stack
