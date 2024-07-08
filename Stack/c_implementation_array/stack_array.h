@@ -28,6 +28,7 @@ int is_full(stack_t *stack);
 void pop(stack_t *stack);
 void peek(stack_t *stack);
 void push(stack_t *stack, const char *data);
+stack_t *initialise_stack(int size);
 
 
 #endif /* ifndef STACK_ARRAY_H */
