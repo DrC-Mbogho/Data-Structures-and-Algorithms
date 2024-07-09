@@ -21,7 +21,7 @@ typedef struct queue
 {
 	int size;
 	int front;
-	int back;
+	int rear;
 	int count;
 	char **content;
 } queue_t;
