@@ -86,3 +86,34 @@ void enqueue(queue_t *queue, const char *data)
 	content[queue->rear] = strdup(data);
 	queue->count++;
 }
+
+
+/**
+ * dequeue - Removes the item currently at the front of the queue
+ * and returns it
+ * @queue: Pointer to the queue
+ *
+ * Return: Nothing
+ */
+void dequeue(queue_t *queue)
+{
+	char **content = queue->content;
+
+	if (is_empty(queue))
+	{
+		printf("\nCannot dequeue. Queue is empty\n");
+		return;
+	}
+
+	printf("\nDequeued item: %s\n", content[queue->front]);
+	free(content[queue->front]);
+
+	queue->front = (queue->front + 1) % queue->size; /* Implement a circular queue */
+	queue->count--;
+
+	if (is_empty(queue))
+	{
+		queue->front = -1;
+		queue->front = -1;
+	}
+}
