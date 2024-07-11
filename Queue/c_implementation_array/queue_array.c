@@ -117,3 +117,33 @@ void dequeue(queue_t *queue)
 		queue->front = -1;
 	}
 }
+
+
+/**
+ * display_queue - Prints the content of the queue on standard output
+ * @queue: Pointer to the queue
+ *
+ * Return: Nothing
+ */
+void display_queue(queue_t *queue)
+{
+	int i;
+	int index;
+	char **content = queue->content;
+
+	if (is_empty(queue))
+	{
+		printf("\nQueue is empty\n");
+		return;
+	}
+
+	printf("\nCurrent queue:\n");
+	for (i = 0; i < queue->size; i++)
+	{
+		index = (queue->front + i) % queue->size;
+		printf("%s", content[index]);
+		if (i < queue->count - 1)
+			printf(", ");
+	}
+	printf("\n");
+}
