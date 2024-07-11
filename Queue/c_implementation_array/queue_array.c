@@ -29,6 +29,7 @@ queue_t *initialise_queue(int size)
 	if (queue->content == NULL)
 	{
 		perror("Malloc failed while allocating memory for queue content\n");
+		free(queue);
 		return (NULL);
 	}
 
