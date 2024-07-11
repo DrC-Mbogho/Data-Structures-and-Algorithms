@@ -45,7 +45,7 @@ queue_t *initialise_queue(int size)
  */
 int is_empty(queue_t *queue)
 {
-	return ((queue == NULL || queue->count == 0));
+	return (queue == NULL || queue->count == 0);
 }
 
 
@@ -57,7 +57,7 @@ int is_empty(queue_t *queue)
  */
 int is_full(queue_t *queue)
 {
-	return ((queue == NULL || queue->count == queue->size));
+	return (queue != NULL && queue->count == queue->size);
 }
 
 
