@@ -58,3 +58,31 @@ int is_full(queue_t *queue)
 {
 	return ((queue == NULL || queue->count == queue->size));
 }
+
+
+/**
+ * enqueue - Adds a new item at the rear end of the queue
+ * @queue: Pointer to the queue
+ * @data: String to add to the queue
+ *
+ * Return: Nothing
+ * Description: If the queue is already full, the data item will not be added
+ * to it.
+ */
+void enqueue(queue_t *queue, const char *data)
+{
+	char **content = queue->content;
+
+	if (is_full(queue))
+	{
+		printf("\nCannot add item. Queue is full\n");
+		return;
+	}
+
+	if (is_empty(queue))
+		queue->front = 0;
+
+	queue->rear = (queue->rear + 1) % queue->size;
+	content[queue->rear] = strdup(data);
+	queue->count++;
+}
