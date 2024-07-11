@@ -34,3 +34,27 @@ queue_t *initialise_queue(int size)
 
 	return (queue);
 }
+
+
+/**
+ * is_empty - Evaluates if the queue is currently empty
+ * @queue: Pointer to the queue
+ *
+ * Return: 1 if the queue is empty, otherwise 0
+ */
+int is_empty(queue_t *queue)
+{
+	return ((queue == NULL || queue->count == 0));
+}
+
+
+/**
+ * is_full - Evaluates if the queue is currently full
+ * @queue: Pointer to the queue
+ *
+ * Return: 1 if the queue is full, otherwise 0
+ */
+int is_full(queue_t *queue)
+{
+	return ((queue == NULL || queue->count == queue->size));
+}
