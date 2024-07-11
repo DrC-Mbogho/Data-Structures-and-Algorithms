@@ -30,7 +30,7 @@ typedef struct queue
 int is_empty(queue_t *queue);
 int is_full(queue_t *queue);
 void enqueue(queue_t *queue, const char *data);
-char *dequeue(queue_t *queue);
+void dequeue(queue_t *queue);
 char *peek(queue_t *queue);
 void display_queue(queue_t *queue);
 queue_t *initialise_queue(int size);
